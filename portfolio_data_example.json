@@ -1,0 +1,52 @@
+[
+	{
+		"Asset": "iShares Core MSCI World UCITS ETF USD (Acc)",
+        "ISIN": "IE00B4L5Y983",
+		"Price": "9",
+		"Allocation": "0.4",
+		"Allocated": "1500.23",
+        "Minnimum_Movement_Size": "0",
+        "Movement_Comission": "0",
+		"Reserved": "50.2"
+	},
+	{
+		"Asset": "MemeStonk.Inc",
+        "ISIN": "IE00BMW12345",
+		"Price": "17",
+		"Allocation": "0.15",
+		"Allocated": "102.33",
+        "Minnimum_Movement_Size": "1000",
+        "Movement_Comission": "2",
+		"Reserved": "13.3"
+	},
+	{
+		"Asset": "GME TO THE MOON",
+        "ISIN": "IE004444",
+		"Price": "69.420",
+		"Allocation": "0.3",
+		"Allocated": "6010.4",
+        "Minnimum_Movement_Size": "0",
+        "Movement_Comission": "0",
+		"Reserved": "1.337"
+	},
+	{
+		"Asset": "DIAMOND HANDS & CO",
+        "ISIN": "IE003333",
+		"Price": "420.69",
+		"Allocation": "0.1",
+		"Allocated": "405",
+        "Minnimum_Movement_Size": "1000",
+		"Movement_Comission": "2",
+		"Reserved": "20"
+	},
+	{
+		"Asset": "TESLA",
+        "ISIN": "IE00222333",
+		"Price": "0.1234",
+		"Allocation": "0.05",
+		"Allocated": "1333",
+        "Minnimum_Movement_Size": "1000",
+        "Movement_Comission": "2",
+		"Reserved": "200"
+	}
+]
