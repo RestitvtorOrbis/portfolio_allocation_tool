@@ -64,17 +64,17 @@ if rebalance == True:
     print(CRED +"Rebalancing not yet implemented: TODO"+CEND)
 
 #calculate quantity of assets to be added and quantity to be reserved for future iterations
-for i in allocation_deviation_list:
-    for asset in portfolio:
-        if float(asset.get("Allocation_Deviation"))==i:
-            if asset["Minnimum_Movement_Size"]=="0": #free movement
-                asset["ToBeAdded"], Reserved =  divmod((float(asset["Allocation"])*(amount_introduced)+float(asset["Reserved"])-float(asset["Movement_Comission"]))/float(asset["Price"]),1)   
-                asset["Reserved"] = Reserved*float(asset["Price"])
-            elif (float(asset["Allocation"])*(amount_introduced)+float(asset["Reserved"]))>=float(asset["Minnimum_Movement_Size"]): #if the amount is above the defined lower threshold
-                asset["ToBeAdded"], Reserved =  divmod((float(asset["Allocation"])*(amount_introduced)+float(asset["Reserved"])-float(asset["Movement_Comission"]))/float(asset["Price"]),1)   
-                asset["Reserved"] = Reserved*float(asset["Price"]) 
-            else: #if it is below the threshold it is reserved 
-                asset["Reserved"]=float(asset["Allocation"])*(amount_introduced)+float(asset["Reserved"])
+
+for asset in portfolio:
+
+    if asset["Minnimum_Movement_Size"]=="0": #free movement
+        asset["ToBeAdded"], Reserved =  divmod((float(asset["Allocation"])*(amount_introduced)+float(asset["Reserved"])-float(asset["Movement_Comission"]))/float(asset["Price"]),1)   
+        asset["Reserved"] = Reserved*float(asset["Price"])
+    elif (float(asset["Allocation"])*(amount_introduced)+float(asset["Reserved"]))>=float(asset["Minnimum_Movement_Size"]): #if the amount is above the defined lower threshold
+        asset["ToBeAdded"], Reserved =  divmod((float(asset["Allocation"])*(amount_introduced)+float(asset["Reserved"])-float(asset["Movement_Comission"]))/float(asset["Price"]),1)   
+        asset["Reserved"] = Reserved*float(asset["Price"]) 
+    else: #if it is below the threshold it is reserved 
+        asset["Reserved"]=float(asset["Allocation"])*(amount_introduced)+float(asset["Reserved"])
     Allocated= float(asset.get("ToBeAdded") or 0)*float(asset["Price"])
     asset["Allocated"]=Allocated
 
